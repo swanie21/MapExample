@@ -16,6 +16,7 @@ export default class MapExample extends Component {
 
   constructor() {
     super();
+    this.watchID = null;
 
     this.state = {
       region: {
@@ -57,7 +58,7 @@ export default class MapExample extends Component {
   }
 
   componentWillUnmount() {
-    navigator.geolocation.clearWatch(this.watchId);
+    navigator.geolocation.clearWatch(this.watchID);
   }
 
   render() {
